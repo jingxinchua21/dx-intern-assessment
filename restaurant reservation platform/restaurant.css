@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: "monsterrat", sans-serif;
+}
+.banner{
+    min-height: 100vh;
+    background:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("https://cdn.thespaces.com/wp-content/uploads/2019/09/Korea-Hero.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #b3a59a;
+    padding-bottom: 20px;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: 420px 420px;
+}
+.card-img{
+    background: url("https://i.pinimg.com/originals/c9/92/f5/c992f5d4ad1302058c5f3ee4f17b0444.jpg") center/cover no-repeat;
+	border-radius: 25px;
+	height: 330px;
+}
+.banner h2{
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+.card-content{
+    background: #fff;
+    height: 330px;
+	border-radius: 25px;
+}
+
+.card-content h3{
+    text-align: center;
+    color: #000;
+    padding: 25px 0 10px 0;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.form-row{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+form select, form input{
+    display: block;
+    width: 100%;
+    margin: 15px 12px;
+    padding: 5px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #eee;
+    font-weight: 300;
+}
+
+form input[type = text], form input[type = number], form input::placeholder, select{
+    color: #b3a59a;
+}
+
+form input[type = submit]{
+    color: #fff;
+    background: #b3a59a;
+    padding: 12px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form input[type = submit]:hover{
+    opacity: 0.9;
+}
+
+#bookbtn{
+	background-color: #b3a59a;
+	box-sizing: 30px;
+	margin: 15px 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-color: white;
+	font-size: 20px;
+	color: white;
+	width: 100%;
+}

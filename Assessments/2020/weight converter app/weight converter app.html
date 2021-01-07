@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="weightconverter.css" /><br><br><br>
+<title>Weight converter app</title>
+</head>
+
+<body>
+	
+<div class="container">
+  <div class="wrap">
+
+  <div class="wca">
+    <h1>Weight Converter App</h1><br><br><br>
+  </div>
+
+  <div class="converter-wrap">
+    <form class="typeweight">
+      <input type="number" placeholder="Type Weight In Kilograms" id="kilograms"><br><br><br>
+    </form>
+
+    <div class="weight weight-1">
+      <h2 class="pound">Pounds</h2><br>
+      <p class="weight-value" id="pounds">0</p>
+    </div>
+
+    <div class="weight weight-2">
+      <h2 class="milligram">Milligrams</h2><br>
+      <p class="weight-value" id="milligrams">0</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+</body>
+	
+	<script>
+	
+		(function(){
+		var kilograms, pounds, milligrams;
+		
+		kilograms = document.getElementById("kilograms");
+		pounds = document.getElementById("pounds");
+		milligrams = document.getElementById("milligrams");
+		
+		kilograms.addEventListener("keyup",function(e){
+			var kilogramweight, poundweight, milligramweight;	
+								   
+				kilogramweight = e.target.value;
+				poundweight = kilogramweight * 2.205;
+				milligramweight = kilogramweight * 1000000;
+								   
+				pounds.textContent = poundweight;
+				milligrams.textContent -= milligramweight;
+			});
+			
+		})();
+
+	
+	</script>
+</html>

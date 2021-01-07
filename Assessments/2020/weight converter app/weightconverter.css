@@ -1,0 +1,88 @@
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+	background-color: black;
+}
+
+.converter-wrap {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 5.2rem;
+	margin-left: 60px;
+	color: #fff;
+    font-weight: lighter;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: .6rem 1rem;
+    border-radius: 4px;
+    transition: all .3s ease;
+}
+
+h2 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+
+p {
+    font-size: 1.8rem;
+	color: #FFF000;
+}
+
+form {
+	color: #fff;
+}
+
+form input {
+    font-family: inherit;
+    font-size: 1.6rem;
+}
+
+form input[type="number"] {
+    border: 2px solid transparent;
+    display: block;
+	margin-top: 20px;
+    width: 35.2rem;
+    height: 4rem;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 0 2rem;
+}
+
+form input[type="number"]:focus {
+    border: 2px solid #FFF000;
+    outline: none;
+}
+
+.weight {
+    border-radius: 4px;
+    color: #FFF;
+    padding: 1rem 2rem;
+}
+
+.weight:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.weight-1 .weight-2 {
+    background-color: #000;
+}
+
+.weight-value {
+    font-weight: bold;
+    font-size: 3rem;
+}

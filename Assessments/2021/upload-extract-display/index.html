@@ -1,0 +1,48 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Engineering Internship Assessment</title>
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="Digi-X Internship Committee" />
+
+  <link rel="stylesheet" href="style.css?v=1.0" />
+  <link rel="stylesheet" href="custom.css?v=1.0" />
+
+</head>
+
+<body>
+	
+
+    <div class="top-wrapper">
+        <img src="https://assets.website-files.com/5cd4f29af95bc7d8af794e0e/5cfe060171000aa66754447a_n-digi-x-logo-white-yellow-standard.svg" alt="digi-x logo" height="70" />
+        <h1>Engineering Internship Assessment</h1>
+    </div><br>
+
+	<div class="uploader">
+    <h2>Please upload image file</h2><br>
+		<input type ="file" onchange="readUrl(this)"><br><br>
+		<img src="https://media-exp1.licdn.com/dms/image/C4D0BAQGW_28Nk0LVqQ/company-logo_200_200/0/1587477437534?e=2159024400&v=beta&t=yZIRuQGYRFdoC25vFYhXKZI02tug97XXi9mX4F3vNu0" id ="image" alt=""><br><br>
+  </div>
+       
+<script>
+
+	var a = document.getElementById("image");
+	function readUrl(input){
+		if (input.files){
+			var reader = new FileReader();
+			reader.readAsDataURL(input.files[0]);
+			reader.onload=(e)=>{
+				a.src= e.target.result;
+			}
+		}
+	}
+	
+</script>
+		
+      </body>  
+ </html>  

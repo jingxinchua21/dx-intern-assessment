@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+
+        <title>Reservation Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="restaurant.css">
+    </head>
+    <body>
+        
+        <section class = "banner">
+            <h2>HELLO, STRANGER</h2>
+            <div class = "card-container">
+                <div class = "card-img">
+                </div>
+
+                <div class = "card-content">
+                    <h3>Reservation</h3>
+                    <form id = "reservationform">
+                        <div class = "form-row">
+                            <select name = "days">
+                                <option value = "day-select">Select Day</option>
+                                <option value = "sunday">Sunday</option>
+                                <option value = "monday">Monday</option>
+                                <option value = "tuesday">Tuesday</option>
+                                <option value = "wednesday">Wednesday</option>
+                                <option value = "thursday">Thursday</option>
+                                <option value = "friday">Friday</option>
+                                <option value = "saturday">Saturday</option>
+                            </select>
+
+                            <input type = "text" name = "hours" placeholder="Time">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "text" name = "name" placeholder="Full Name">
+                            <input type = "text" name = "phone" placeholder="Phone Number">
+                        </div>
+
+                        <div class = "form-row">
+                            <input type = "number" id = "person" placeholder="How Many Persons?" min = "1">
+                        </div>
+						
+						 <div class = "form-row">
+                            <button id = "bookbtn"  >BOOK</button>
+									<script type="text/javascript">
+    									document.getElementById("bookbtn").onclick = function () {
+												location.href = "sucess.html";
+										};
+							 		</script>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyAQrApxH5W_vqpbBigY5Gl5da4zvCZi0-g",
+    authDomain: "reservation-39c08.firebaseapp.com",
+    databaseURL: "https://reservation-39c08-default-rtdb.firebaseio.com",
+    projectId: "reservation-39c08",
+    storageBucket: "reservation-39c08.appspot.com",
+    messagingSenderId: "36059534975",
+    appId: "1:36059534975:web:d13fc9db73ce61eebad14a",
+    measurementId: "G-06B86WJZ1L"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
+</script>
+		
+	<script>
+	
+		const form = document.querySelector("#reservationform");
+		
+		form.addEventListener("submit", (e) => {
+			e.preventDefault();
+			db.collection("reservation").add({
+				days: form.days.value,
+				hours: form.hours.value,
+				name: form.name.value,
+				phone: form.phone.value,
+				person: form.person.value
+				
+	
+				
+					
+			});	
+		});
+		
+
+
+	</script>
+		
+
+    </body>
+</html>
